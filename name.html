@@ -16,16 +16,58 @@
     <div class="title-group">
       <div class="hover-area">
         <div class="kr-line">
-          <span class="hover-word">명수대</span>아파트
+          <span id="hover-word">명수대</span>아파트
         </div>
 
-        <div class="hover-description">
-          명수대는 맑은 한강물이 유유히 흐르는 경치가 좋은 곳이라 하여 일본인 기노시타 사카에가 붙인 이름이다
-        </div>
+        <div id="hover-description" class="hover-description"></div>
       </div>
 
       <div class="en-line">Myeongsu-dae apartment</div>
     </div>
   </div>
+
+  <script>
+    const hoverWord = document.getElementById("hover-word");
+    const hoverDescription = document.getElementById("hover-description");
+
+    const fullText = "명수대는 맑은 한강물이 유유히 흐르는 경치가 좋은 곳이라 하여 일본인 기노시타 사카에가 붙인 이름이다";
+
+    let typingInterval;
+    let isTyping = false;
+
+    function typeText() {
+      clearInterval(typingInterval);
+      hoverDescription.textContent = "";
+      hoverDescription.classList.add("visible");
+
+      let i = 0;
+      isTyping = true;
+
+      typingInterval = setInterval(() => {
+        hoverDescription.textContent += fullText.charAt(i);
+        i++;
+
+        if (i >= fullText.length) {
+          clearInterval(typingInterval);
+          isTyping = false;
+        }
+      }, 65); // 속도: 숫자 작을수록 더 빠름
+    }
+
+    function hideText() {
+      clearInterval(typingInterval);
+      hoverDescription.textContent = "";
+      hoverDescription.classList.remove("visible");
+      isTyping = false;
+    }
+
+    hoverWord.addEventListener("mouseenter", () => {
+      if (!isTyping) typeText();
+    });
+
+    hoverWord.addEventListener("mouseleave", () => {
+      hideText();
+    });
+  </script>
 </body>
 </html>
