@@ -20,6 +20,7 @@ body {
   position: absolute;
   top: 30%;
   left: 60px;
+  letter-spacing: -0.5px;
 }
 
 .hover-area {
