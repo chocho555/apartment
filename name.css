@@ -20,7 +20,6 @@ body {
   position: absolute;
   top: 30%;
   left: 60px;
-  letter-spacing: -0.5px;
 }
 
 .hover-area {
@@ -42,7 +41,7 @@ body {
   font-size: 50px;
   font-weight: 600;
   line-height: 1.15;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   color: #000;
 }
 
