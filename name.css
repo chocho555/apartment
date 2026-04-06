@@ -45,29 +45,29 @@ body {
   color: #000;
 }
 
-.hover-word {
+#hover-word {
   cursor: default;
 }
 
+/* 설명 문장 */
 .hover-description {
-  position: absolute;
-  top: 12px;
-  left: 50%;
+  position: fixed;
+  top: 32%;
+  left: 50vw;
 
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   color: #000;
+  line-height: 1.4;
   white-space: nowrap;
 
   opacity: 0;
   transform: translateX(0);
-  transition: opacity 0.5s ease, transform 0.7s ease;
-
   pointer-events: none;
 }
 
-.hover-area:hover .hover-description {
+/* 나타날 때 */
+.hover-description.visible {
   opacity: 1;
-  transform: translateX(140px);
 }
