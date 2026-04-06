@@ -34,6 +34,7 @@ body {
   width: 500px;
   height: auto;
   display: block;
+  background-image: url("image1.jpg");
 }
 a {
   text-decoration: none;
