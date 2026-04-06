@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Name</title>
 
-  <!-- Noto Sans KR -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;600&display=swap" rel="stylesheet">
@@ -15,14 +14,17 @@
 <body>
   <div class="name-page">
     <div class="title-group">
-      <div class="kr-line">
-        <span class="hover-word">명수대</span>아파트
-      </div>
-      <div class="en-line">Myeongsu-dae apartment</div>
+      <div class="hover-area">
+        <div class="kr-line">
+          <span class="hover-word">명수대</span>아파트
+        </div>
 
-      <div class="hover-description">
-        명수대는 맑은 한강물이 유유히 흐르는 경치가 좋은 곳이라 하여 일본인 기노시타 사카에가 붙인 이름이다
+        <div class="hover-description">
+          명수대는 맑은 한강물이 유유히 흐르는 경치가 좋은 곳이라 하여 일본인 기노시타 사카에가 붙인 이름이다
+        </div>
       </div>
+
+      <div class="en-line">Myeongsu-dae apartment</div>
     </div>
   </div>
 </body>
