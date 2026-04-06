@@ -1,31 +1,73 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Name</title>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;600&display=swap" rel="stylesheet">
+body {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100vh;
+}
 
-  <link rel="stylesheet" href="name.css">
-</head>
-<body>
-  <div class="name-page">
-    <div class="title-group">
-      <div class="hover-area">
-        <div class="kr-line">
-          <span class="hover-word">명수대</span>아파트
-        </div>
+.name-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
 
-        <div class="hover-description">
-          명수대는 맑은 한강물이 유유히 흐르는 경치가 좋은 곳이라 하여 일본인 기노시타 사카에가 붙인 이름이다
-        </div>
-      </div>
+.title-group {
+  position: absolute;
+  top: 30%;
+  left: 60px;
+}
 
-      <div class="en-line">Myeongsu-dae apartment</div>
-    </div>
-  </div>
-</body>
-</html>
+.hover-area {
+  position: relative;
+  display: inline-block;
+}
+
+.kr-line {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #000;
+}
+
+.en-line {
+  margin-top: 4px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  color: #000;
+}
+
+.hover-word {
+  cursor: default;
+}
+
+.hover-description {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.7s ease;
+
+  pointer-events: none;
+}
+
+.hover-area:hover .hover-description {
+  opacity: 1;
+  transform: translateX(140px);
+}
