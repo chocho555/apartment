@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 40px 60px;
+}
+
+/* 제목 */
+.location-title {
+  position: absolute;
+  top: 110px;
+  left: 60px;
+}
+
+.kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+  line-height: 1.2;
+}
+
+.en {
+  margin-top: 8px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+/* 지도 박스 */
+.map-wrap {
+  width: 620px;
+  height: 420px;
+  position: absolute;
+  top: 240px;
+  left: 60px;
+  background: #ddd;
+}
