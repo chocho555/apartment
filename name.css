@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+/* 텍스트 위치 + 스타일 */
+.title {
+  position: absolute;
+  top: 30%;
+  left: 60px;
+
+  font-size: 50px;
+  line-height: 1.2;
+
+  /* 한글 */
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 영어만 Helvetica 적용 */
+.title span {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
